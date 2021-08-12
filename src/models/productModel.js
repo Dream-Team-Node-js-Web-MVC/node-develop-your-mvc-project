@@ -11,6 +11,10 @@ const ProductSchema = new Schema(
       type: String,
       require: true,
     },
+    country: {
+      type: String,
+      require: true,
+    },
     price: {
       type: Number,
       require: true,
@@ -25,7 +29,7 @@ const ProductSchema = new Schema(
       },
     ],
   },
-  { timestamp: true },
+  { timestamp: true }
 );
 
 const Product = mongoose.model("Product", ProductSchema);
