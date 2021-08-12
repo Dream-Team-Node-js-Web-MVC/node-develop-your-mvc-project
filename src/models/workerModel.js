@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 const { isEmail } = require("validator");
 
-const UserSchema = new Schema(
+const WorkerSchema = new Schema(
   {
     firstName: {
       type: String,
@@ -10,16 +10,6 @@ const UserSchema = new Schema(
     },
     lastName: {
       type: String,
-      trim: true,
-    },
-    address: {
-      street: String,
-      city: String,
-      country: String,
-      zipcode: Number,
-    },
-    phone: {
-      type: Number,
       trim: true,
     },
     email: {
@@ -31,13 +21,19 @@ const UserSchema = new Schema(
         message: (props) => `${props.value} is not a valid email`,
       },
     },
+    permissions: {
+      type: {
+        type: String,
+        enum: ["editor", "admin"],
+      },
+    },
     password: String,
   },
   { timestamp: true },
 );
 
-const User = mongoose.model("User", UserSchema);
+const Worker = mongoose.model("Worker", WorkerSchema);
 
 module.exports = {
-  User: User,
+  Worker: Worker,
 };
