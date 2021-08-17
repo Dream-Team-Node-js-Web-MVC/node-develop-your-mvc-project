@@ -12,6 +12,7 @@ const {
   ENCRYPTION_SALT_DEVELOPMENT,
   ENCRYPTION_SALT_PRODUCTION,
   ACCESS_TOKEN_SECRET,
+  CLIENT_URL,
 } = process.env;
 
 const ENV = NODE_ENV || "development";
@@ -33,6 +34,9 @@ const CONFIG = {
     db: {
       url: MONGO_DB_URL_PRODUCTION,
     },
+    client: {
+      URL: CLIENT_URL || "http://localhost:3000",
+    },
     encrypt: {
       salt: ENCRYPTION_SALT_PRODUCTION,
     },
@@ -51,6 +55,9 @@ const CONFIG = {
     db: {
       url: MONGO_DB_URL_DEVELOPMENT,
     },
+    client: {
+      URL: CLIENT_URL || "http://localhost:3000",
+    },
     encrypt: {
       salt: ENCRYPTION_SALT_DEVELOPMENT,
     },
@@ -68,6 +75,9 @@ const CONFIG = {
     },
     db: {
       url: MONGO_DB_URL_TEST,
+    },
+    client: {
+      URL: CLIENT_URL || "http://localhost:3000",
     },
   },
 };

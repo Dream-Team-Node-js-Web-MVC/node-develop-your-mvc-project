@@ -16,13 +16,10 @@ const ProductSchema = new Schema(
       require: true,
     },
     price: {
-      type: Number,
+      type: [{ pack: Number, packPrice: Number }],
       require: true,
     },
-    stock: {
-      type: Number,
-      require: true,
-    },
+    stock: Number,
     images: [
       {
         url: String,
