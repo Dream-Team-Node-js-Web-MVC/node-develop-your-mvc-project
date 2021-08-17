@@ -3,7 +3,7 @@ const { json } = require("body-parser");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cors = require("cors");
-const config = require("./config");
+const c = require("./config");
 const { userRouter, productRouter, workerRouter } = require("./routes");
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(morgan("dev"));
 app.use(helmet());
 app.use(
   cors({
-    origin: config.client.URL,
+    origin: c.config.client.URL,
   })
 );
 

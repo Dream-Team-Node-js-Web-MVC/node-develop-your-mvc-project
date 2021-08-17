@@ -35,7 +35,8 @@ const getProducts = async (req, res, next) => {
     const limit = parseInt(size);
     const skip = (page - 1) * size;
 
-    const products = await db.Product.find().limit(limit).skip(skip).lean();
+    /* const products = await db.Product.find().limit(limit).skip(skip).lean(); */
+    const products = await db.Product.find().lean();
     res.status(200).send({
       data: products,
     });
