@@ -11,21 +11,22 @@ const ProductSchema = new Schema(
       type: String,
       require: true,
     },
+    country: {
+      type: String,
+      require: true,
+    },
     price: {
-      type: Number,
+      type: [{ pack: Number, packPrice: Number }],
       require: true,
     },
-    stock: {
-      type: Number,
-      require: true,
-    },
+    stock: Number,
     images: [
       {
         url: String,
       },
     ],
   },
-  { timestamp: true },
+  { timestamp: true }
 );
 
 const Product = mongoose.model("Product", ProductSchema);
