@@ -9,6 +9,7 @@ const {
   MONGO_DB_URL_DEVELOPMENT,
   MONGO_DB_URL_TEST,
   PORT = 9999,
+  // ! commented to use firebase
   // ENCRYPTION_SALT_DEVELOPMENT,
   // ENCRYPTION_SALT_PRODUCTION,
   // ACCESS_TOKEN_SECRET,
@@ -44,6 +45,7 @@ const CONFIG = {
     db: {
       url: MONGO_DB_URL_PRODUCTION,
     },
+    // ! commented to use firebase
     // client: {
     //   URL: CLIENT_URL || "http://localhost:3000",
     // },
@@ -79,6 +81,7 @@ const CONFIG = {
     db: {
       url: MONGO_DB_URL_DEVELOPMENT,
     },
+    // ! commented to use firebase
     // client: {
     //   URL: CLIENT_URL || "http://localhost:3000",
     // },
@@ -114,6 +117,7 @@ const CONFIG = {
     db: {
       url: MONGO_DB_URL_TEST,
     },
+    // ! commented to use firebase
     // client: {
     //   URL: CLIENT_URL || "http://localhost:3000",
     // },

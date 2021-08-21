@@ -1,10 +1,30 @@
 const db = require("../models");
-const { encryptString } = require("../utils/encrypt");
 
 //TODO: we need to think about the way of register and login
-const register = async (req, res, next) => {};
+const register = async (req, res, next) => {
+  const { uid, email } = req.user;
 
-const logIn = async (req, res, next) => {};
+  try {
+    const user = await db.User.findOne({ email });
+    if (user) {
+      return res.status(200).send({ data: { email: email } });
+    }
+    if (!user) {
+      await db.User.create({
+        firebase_id: uid,
+        email: email,
+      });
+    }
+    res.status(201).send({
+      data: {
+        email: email,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+};
 
 const getUsers = async (req, res, next) => {
   try {
@@ -76,7 +96,6 @@ const deleteUser = async (req, res, next) => {
 
 module.exports = {
   register,
-  logIn,
   getUsers,
   getUserById,
   updateUser,
