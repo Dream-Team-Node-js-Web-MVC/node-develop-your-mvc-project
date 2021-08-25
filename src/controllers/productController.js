@@ -23,6 +23,8 @@ const createProduct = async (req, res, next) => {
     next(error);
   }
 };
+
+// Need to make the petition with query parameters as "/products?page=2&size=2"
 const getProducts = async (req, res, next) => {
   try {
     let { page, size } = req.query;
@@ -35,8 +37,8 @@ const getProducts = async (req, res, next) => {
     const limit = parseInt(size);
     const skip = (page - 1) * size;
 
-    /* const products = await db.Product.find().limit(limit).skip(skip).lean(); */
-    const products = await db.Product.find().lean();
+    const products = await db.Product.find().limit(limit).skip(skip).lean();
+    // const products = await db.Product.find().lean();
     res.status(200).send({
       data: products,
     });

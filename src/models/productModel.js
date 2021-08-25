@@ -22,7 +22,7 @@ const ProductSchema = new Schema(
     stock: Number,
     images: [
       {
-        url: String,
+        type: String,
       },
     ],
   },
