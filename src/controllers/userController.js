@@ -3,10 +3,10 @@ const db = require("../models");
 //TODO: we need to think about the way of register and login
 const register = async (req, res, next) => {
   const { uid, email } = req.user;
-
   try {
     const user = await db.User.findOne({ email });
     if (user) {
+      console.log(user);
       return res.status(200).send({ data: { email: email } });
     }
     if (!user) {

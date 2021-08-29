@@ -1,10 +1,10 @@
-const { getAuthToken, verifyAuthToken } = require("../services/firebase");
+const { getAuthToken, verifyIdToken } = require("../services/firebase");
 const db = require("../models");
 
 const authMiddleware = async (req, res, next) => {
   try {
     const bearerToken = await getAuthToken(req.headers);
-    const userClaims = await verifyAuthToken(bearerToken);
+    const userClaims = await verifyIdToken(bearerToken);
 
     const { email, uid } = userClaims;
     req.user = {
