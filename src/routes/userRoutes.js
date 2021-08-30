@@ -5,6 +5,8 @@ const { userController } = require("../controllers");
 const userRouter = Router();
 
 userRouter.post("/register", authMiddleware, userController.register);
+userRouter.post("/sign-out", authMiddleware, userController.signOut);
+
 // userRouter.post("/login", userController.logIn);
 userRouter.get("/", userController.getUsers);
 userRouter.get("/:id", userController.getUserById);

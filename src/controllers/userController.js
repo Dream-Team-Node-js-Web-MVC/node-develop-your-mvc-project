@@ -5,8 +5,8 @@ const register = async (req, res, next) => {
   const { uid, email } = req.user;
   try {
     const user = await db.User.findOne({ email });
+    console.log(user ? true : false);
     if (user) {
-      console.log(user);
       return res.status(200).send({ data: { email: email } });
     }
     if (!user) {
@@ -93,6 +93,13 @@ const deleteUser = async (req, res, next) => {
     next(error);
   }
 };
+const signOut = async (req, res) => {
+  req.signOut();
+
+  res.status(200).send({
+    data: "OK",
+  });
+};
 
 module.exports = {
   register,
@@ -100,4 +107,5 @@ module.exports = {
   getUserById,
   updateUser,
   deleteUser,
+  signOut,
 };
