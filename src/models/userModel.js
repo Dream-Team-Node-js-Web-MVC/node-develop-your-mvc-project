@@ -31,9 +31,13 @@ const UserSchema = new Schema(
         message: (props) => `${props.value} is not a valid email`,
       },
     },
-    password: String,
+    // password: String,
+    firebase_id: {
+      type: String,
+      unique: true,
+    },
   },
-  { timestamp: true },
+  { timestamp: true }
 );
 
 const User = mongoose.model("User", UserSchema);
