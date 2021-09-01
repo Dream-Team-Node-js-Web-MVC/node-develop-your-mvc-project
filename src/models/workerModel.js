@@ -4,11 +4,7 @@ const { isEmail } = require("validator");
 
 const WorkerSchema = new Schema(
   {
-    firstName: {
-      type: String,
-      trim: true,
-    },
-    lastName: {
+    fullName: {
       type: String,
       trim: true,
     },
@@ -21,15 +17,20 @@ const WorkerSchema = new Schema(
         message: (props) => `${props.value} is not a valid email`,
       },
     },
+    password: String,
     permissions: {
       type: {
         type: String,
-        enum: ["editor", "admin"],
+        enum: ["employee", "admin"],
       },
     },
-    password: String,
+    profileImage: [
+      {
+        type: String,
+      },
+    ],
   },
-  { timestamp: true },
+  { timestamp: true }
 );
 
 const Worker = mongoose.model("Worker", WorkerSchema);
