@@ -6,7 +6,6 @@ const WorkerSchema = new Schema(
   {
     fullName: {
       type: String,
-      trim: true,
     },
     email: {
       type: String,
@@ -18,7 +17,7 @@ const WorkerSchema = new Schema(
       },
     },
     password: String,
-    permissions: {
+    role: {
       type: {
         type: String,
         enum: ["employee", "admin"],

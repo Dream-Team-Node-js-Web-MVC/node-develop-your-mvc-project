@@ -1,21 +1,21 @@
 const db = require("../models");
 const createWorker = async (req, res, next) => {
-  const { firstName, lastName, email, permissions, password } = req.body;
+  const { fullName, email, password, role, profileImage } = req.body;
   try {
     const worker = await db.Product.create({
-      firstName,
-      lastName,
+      fullName,
       email,
-      permissions,
       password,
+      role,
+      profileImage,
     });
     res.status(200).send({
       data: {
-        firstName: worker.firstName,
-        lastName: worker.lastName,
+        fullName: worker.fullName,
         email: worker.email,
-        permissions: worker.permissions,
         password: worker.password,
+        role: worker.role,
+        profileImage: worker.profileImage,
       },
     });
   } catch (error) {
@@ -57,7 +57,7 @@ const getWorkerById = async (req, res, next) => {
 
 const updateWorker = async (req, res, next) => {
   const { id: workerId } = req.params;
-  const { firstName, lastName, email, permissions, password } = req.body;
+  const { fullName, email, password, role, profileImage } = req.body;
 
   try {
     const updatedWorker = await db.Worker.findOneAndUpdate(
@@ -66,11 +66,11 @@ const updateWorker = async (req, res, next) => {
       },
       {
         $set: {
-          firstName,
-          lastName,
+          fullName,
           email,
-          permissions,
           password,
+          role,
+          profileImage,
         },
       },
       {
