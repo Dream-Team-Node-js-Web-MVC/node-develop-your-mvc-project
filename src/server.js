@@ -12,10 +12,12 @@ app.use(morgan("dev"));
 app.use(helmet());
 app.use(
   cors({
-    origin: c.config.client.URL,
+    //! commented to use firebase
+    // origin: c.config.client.URL,
   })
 );
 
+// TODO  set middleware to the routes
 app.use("/users", userRouter);
 app.use("/products", productRouter);
 app.use("/workers", workerRouter);
