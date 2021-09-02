@@ -44,9 +44,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 13.69 },
           ],
           stock: 600,
-          images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
-          ],
+          images: ["https://moritz.com/media/wysiwyg/MORITZ.png"],
         },
         {
           title: "Red Horse",
@@ -60,14 +58,14 @@ async function seedProductsData(collectionArr) {
           ],
           stock: 240,
           images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
+            "https://www.monde-selection.com/wp-content/uploads/2019/08/_DSF0521.png",
           ],
         },
         {
           title: "Cusqueña",
           description:
             "Cusquena is a super-premium lager from Cuzco, the seat of the Inca empire. Brewed since 1911, it uses only the finest natural ingredients, including pure mountain water from a source at 18,000 feet in the Peruvian Andes.",
-          country: "Peru beer",
+          country: "Peruvian beer",
           price: [
             { pack: 6, packPrice: 6.6 },
             { pack: 12, packPrice: 13 },
@@ -75,7 +73,7 @@ async function seedProductsData(collectionArr) {
           ],
           stock: 408,
           images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
+            "https://jotajotafoods.com/wp-content/uploads/2020/07/CER00014.png",
           ],
         },
         {
@@ -90,7 +88,7 @@ async function seedProductsData(collectionArr) {
           ],
           stock: 240,
           images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
+            "https://www.carlsberggroup.com/media/1436/fieldschlossen-weihnachtsbier.png",
           ],
         },
         {
@@ -105,14 +103,14 @@ async function seedProductsData(collectionArr) {
           ],
           stock: 408,
           images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
+            "https://topdeli.co.uk/wp-content/uploads/2018/03/perla-but.png",
           ],
         },
         {
           title: "Närke Kaggen Stormaktsporter",
           description:
             "Imperial Stout brewed with heather honey and aged on oak-barrels for 2 and a half months. Serve at minimum 14 dgs. Share the bottle. It was first brewed in October 2005 and ages well for several years. Beer is Art!",
-          country: "Sweden beer",
+          country: "Swedish beer",
           price: [
             { pack: 6, packPrice: 13.2 },
             { pack: 12, packPrice: 26 },
@@ -120,7 +118,7 @@ async function seedProductsData(collectionArr) {
           ],
           stock: 240,
           images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
+            "https://glasbanken.se/wp-content/uploads/Kaggen-Stormaktsporter-2019-Na%CC%88rke-Kulturbryggeri.png",
           ],
         },
         {
@@ -135,7 +133,7 @@ async function seedProductsData(collectionArr) {
           ],
           stock: 960,
           images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
+            "https://produits.bienmanger.com/35121-0w470h470_Hite_Lager_Beer_From_Kore.jpg",
           ],
         },
       ]);
