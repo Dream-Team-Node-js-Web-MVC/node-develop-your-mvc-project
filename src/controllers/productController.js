@@ -106,18 +106,18 @@ const deleteProduct = async (req, res, next) => {
   }
 };
 //TODO : we may need this function here to manage product in cart
-//^ const getCart = async (req, res, next) => {
-//^   let ids = [];
-//^   req.body.cart.map((ele) => {
-//^     ids.push(ele._id);
-//^   });
-//^   try {
-//^     const products = await Product.find({ _id: { $in: ids } });
-//^     res.send({ products });
-//^   } catch (error) {
-//^     next(error);
-//^   }
-//^ };
+const getCart = async (req, res, next) => {
+  let ids = [];
+  req.body.cart.map((ele) => {
+    ids.push(ele._id);
+  });
+  try {
+    const products = await db.Product.find({ _id: { $in: ids } });
+    res.send({ products });
+  } catch (error) {
+    next(error);
+  }
+};
 
 module.exports = {
   createProduct,
@@ -125,4 +125,5 @@ module.exports = {
   getProductById,
   updateProduct,
   deleteProduct,
+  getCart,
 };
