@@ -18,10 +18,8 @@ const WorkerSchema = new Schema(
     },
     password: String,
     role: {
-      type: {
-        type: String,
-        enum: ["employee", "admin"],
-      },
+      type: String,
+      enum: ["employee", "admin"],
     },
     profileImage: [
       {

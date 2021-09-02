@@ -154,14 +154,14 @@ async function seedWorkersData(collectionArr) {
           email: "jordi@mail.com",
           password: "132456",
           role: "employee",
-          profileImage: [{}],
+          profileImage: [],
         },
         {
           fullName: "Hayk Petrosyan",
           email: "hayk@mail.com",
           password: "132456",
           role: "admin",
-          profileImage: [{}],
+          profileImage: [],
         },
       ]);
     } catch (err) {
