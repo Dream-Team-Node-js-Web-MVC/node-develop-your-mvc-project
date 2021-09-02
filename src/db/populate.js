@@ -150,18 +150,18 @@ async function seedWorkersData(collectionArr) {
     try {
       db.Worker.insertMany([
         {
-          firstName: "Jordi",
-          lastName: "Arnau",
+          fullName: "Jordi Arnau",
           email: "jordi@mail.com",
-          permissions: "editor",
           password: "132456",
+          role: "employee",
+          profileImage: [{}],
         },
         {
-          firstName: "Hayk",
-          lastName: "Petrosyan",
+          fullName: "Hayk Petrosyan",
           email: "hayk@mail.com",
-          permissions: "admin",
           password: "132456",
+          role: "admin",
+          profileImage: [{}],
         },
       ]);
     } catch (err) {
