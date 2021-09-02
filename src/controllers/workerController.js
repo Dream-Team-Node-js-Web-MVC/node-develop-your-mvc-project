@@ -2,7 +2,7 @@ const db = require("../models");
 const createWorker = async (req, res, next) => {
   const { fullName, email, password, role, profileImage } = req.body;
   try {
-    const worker = await db.Product.create({
+    const worker = await db.Worker.create({
       fullName,
       email,
       password,
