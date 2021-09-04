@@ -88,6 +88,32 @@ const updateProduct = async (req, res, next) => {
     next(error);
   }
 };
+
+const updateStock = async (req, res, next) => {
+  const { id: productId } = req.params;
+  const { stock } = req.body;
+
+  try {
+    const updatedStock = await db.Product.findOneAndUpdate(
+      {
+        _id: productId,
+      },
+      {
+        $set: {
+          stock,
+        },
+      },
+      {
+        new: true,
+      }
+    );
+    res.status(200).send({
+      data: updatedStock,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 const deleteProduct = async (req, res, next) => {
   const { id: productId } = req.params;
   try {
@@ -127,6 +153,7 @@ module.exports = {
   getProducts,
   getProductById,
   updateProduct,
+  updateStock,
   deleteProduct,
   getCart,
 };
