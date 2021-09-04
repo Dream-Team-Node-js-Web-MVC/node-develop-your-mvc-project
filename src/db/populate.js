@@ -25,6 +25,7 @@ async function seedProductsData(collectionArr) {
             "With its intense flavour, Alhambra Reserva 1925 is the reinterpretation of the Bohemian-style Pilsner. It is brewed with “Saaz”, an exclusive variety of hops that gives this beer light floral and spice notes. A beer that makes you savour life’s small details.",
           country: "Spanish beer",
           price: [
+            { pack: 6, packPrice: 8 },
             { pack: 12, packPrice: 14 },
             { pack: 24, packPrice: 22.5 },
           ],
