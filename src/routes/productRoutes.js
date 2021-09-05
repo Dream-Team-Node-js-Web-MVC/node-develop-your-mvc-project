@@ -8,6 +8,7 @@ productRouter.post("/cart", productController.getCart);
 productRouter.get("/", productController.getProducts);
 productRouter.get("/:id", productController.getProductById);
 productRouter.patch("/:id", productController.updateProduct);
+productRouter.patch("/stock/:id", productController.updateStock);
 productRouter.delete("/:id", productController.deleteProduct);
 
 module.exports = {
