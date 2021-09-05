@@ -30,9 +30,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 22.5 },
           ],
           stock: 480,
-          images: [
-            "https://tucervezaadomicilio.com/wp-content/uploads/2018/08/alhambra-1925-1.jpg",
-          ],
+          images: ["https://i.ibb.co/PmMVWz5/alhambra.png"],
         },
         {
           title: "Moritz",
@@ -45,7 +43,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 13.69 },
           ],
           stock: 600,
-          images: ["https://moritz.com/media/wysiwyg/MORITZ.png"],
+          images: ["https://i.ibb.co/VCY74K3/moritz.png"],
         },
         {
           title: "Red Horse",
@@ -58,9 +56,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 44 },
           ],
           stock: 240,
-          images: [
-            "https://www.monde-selection.com/wp-content/uploads/2019/08/_DSF0521.png",
-          ],
+          images: ["https://i.ibb.co/LrCkv3n/redhorse.png"],
         },
         {
           title: "Cusqueña",
@@ -73,9 +69,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 25 },
           ],
           stock: 408,
-          images: [
-            "https://jotajotafoods.com/wp-content/uploads/2020/07/CER00014.png",
-          ],
+          images: ["https://i.ibb.co/L95CPbs/cusquena.png"],
         },
         {
           title: "Feldschlösschen",
@@ -88,9 +82,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 46 },
           ],
           stock: 240,
-          images: [
-            "https://www.carlsberggroup.com/media/1436/fieldschlossen-weihnachtsbier.png",
-          ],
+          images: ["https://i.ibb.co/chGrKVy/fieldschlossen.png"],
         },
         {
           title: "Perła",
@@ -103,9 +95,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 46 },
           ],
           stock: 408,
-          images: [
-            "https://topdeli.co.uk/wp-content/uploads/2018/03/perla-but.png",
-          ],
+          images: ["https://i.ibb.co/zfhdrVv/perla.png"],
         },
         {
           title: "Närke Kaggen Stormaktsporter",
@@ -118,9 +108,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 50 },
           ],
           stock: 240,
-          images: [
-            "https://glasbanken.se/wp-content/uploads/Kaggen-Stormaktsporter-2019-Na%CC%88rke-Kulturbryggeri.png",
-          ],
+          images: ["https://i.ibb.co/1bSD63Z/kaggen.png"],
         },
         {
           title: "Hite",
@@ -133,9 +121,7 @@ async function seedProductsData(collectionArr) {
             { pack: 24, packPrice: 57 },
           ],
           stock: 960,
-          images: [
-            "https://produits.bienmanger.com/35121-0w470h470_Hite_Lager_Beer_From_Kore.jpg",
-          ],
+          images: ["https://i.ibb.co/981r5kS/hite.png"],
         },
       ]);
     } catch (err) {
