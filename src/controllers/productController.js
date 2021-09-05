@@ -1,10 +1,11 @@
 const db = require("../models");
 
 const createProduct = async (req, res, next) => {
-  const { title, description, price, stock, images } = req.body;
+  const { title, country, description, price, stock, images } = req.body;
   try {
     const product = await db.Product.create({
       title,
+      country,
       description,
       price,
       stock,
@@ -13,6 +14,7 @@ const createProduct = async (req, res, next) => {
     res.status(200).send({
       data: {
         title: product.title,
+        country: product.country,
         description: product.description,
         price: product.price,
         stock: product.stock,
@@ -61,7 +63,7 @@ const getProductById = async (req, res, next) => {
 
 const updateProduct = async (req, res, next) => {
   const { id: productId } = req.params;
-  const { title, description, price, stock, images } = req.body;
+  const { title, country, description, price, stock, images } = req.body;
 
   try {
     const updatedProduct = await db.Product.findOneAndUpdate(
@@ -71,6 +73,7 @@ const updateProduct = async (req, res, next) => {
       {
         $set: {
           title,
+          country,
           description,
           price,
           stock,
@@ -105,7 +108,7 @@ const deleteProduct = async (req, res, next) => {
     next(error);
   }
 };
-//TODO : we may need this function here to manage product in cart
+
 const getCart = async (req, res, next) => {
   let ids = [];
   req.body.cart.map((ele) => {
